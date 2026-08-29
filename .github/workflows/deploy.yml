@@ -1,0 +1,38 @@
+name: Deploy Jekyll to Public Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout redesigned source
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: false
+
+      - name: Install Jekyll
+        run: |
+          gem install jekyll jekyll-seo-tag jekyll-sitemap jekyll-feed --no-document
+          jekyll --version
+
+      - name: Build site
+        run: jekyll build
+
+      - name: Deploy to public repo
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: Sohanuzzaman3301/Sohanuzzaman3301.github.io
+          publish_branch: main
+          publish_dir: ./_site
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "Deploy redesigned site from ${{ github.sha }}"
