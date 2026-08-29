@@ -1,11 +1,12 @@
 ---
 tag: LAB-001
 title: "SIEM Home Lab — Wazuh + Suricata + Sysmon"
-image: "https://picsum.photos/seed/siem-lab/600/400"
+image: "/assets/images/siem-homelab-topology.png"
 description: "3-VM SOC lab on isolated NAT — Wazuh FIM, Suricata IDS, 15+ attacks mapped to 20+ MITRE ATT&CK techniques."
 tech: "Wazuh · Suricata · Sysmon · Kali"
 github: "https://github.com/Sohanuzzaman3301/SIEM_Home_Lab"
 writeup: ""
+order: 1
 ---
 Built 3-VM SOC lab (Wazuh manager, Sysmon endpoint, Kali attacker) on isolated NAT network. Deployed File Integrity Monitoring across system folders with real-time alerting and tuned custom Wazuh rules.
 

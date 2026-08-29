@@ -6,6 +6,14 @@ _site/
 vendor/
 _bmad/
 .seren*/
+# agent skills - local only, not production
+.agents/
+.claude/
+.playwright-mcp/
+skills-lock.json
+# generated / local assets
+generated/
+favicon-gen.png/
 Gemfile.lock
 .DS_Store
 Thumbs.db

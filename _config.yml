@@ -5,6 +5,7 @@ url: "http://localhost:4000"
 baseurl: ""
 author: "MD Sohanuzzaman Shanto"
 email: "md.sohanuzzaman@proton.me"
+google_analytics: "G-XGKGNBPELC"
 
 markdown: kramdown
 permalink: /:title/
@@ -53,3 +54,12 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  - .agents
+  - .claude
+  - .serena
+  - .playwright-mcp
+  - skills-lock.json
+  - generated
+  - favicon-gen.png
+  - README.md
+  - _bmad

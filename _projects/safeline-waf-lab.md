@@ -1,11 +1,12 @@
 ---
 tag: LAB-002
 title: "SafeLine WAF HomeLab — DVWA Protection"
-image: "https://picsum.photos/seed/waf-lab/600/400"
+image: "/assets/images/projects/safeline-network-topology-800.png"
 description: "Reverse-proxy WAF protecting DVWA — validated against SQLi, XSS, brute-force with zero false positives."
 tech: "SafeLine WAF · DVWA · Kali"
 github: "https://github.com/Sohanuzzaman3301/safeline-waf-homelab"
 writeup: ""
+order: 2
 ---
 Deployed SafeLine WAF in reverse-proxy mode protecting DVWA. Validated detection against SQL Injection, XSS, and brute-force attacks with zero false positives on initial policy.
 

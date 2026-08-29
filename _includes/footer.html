@@ -1,1 +1,6 @@
-<footer class="footer"><span class="mono">© {{ site.time | date: "%Y" }} {{ site.data.profile.display_name }} — Built with Jekyll · Sora + Source Sans 3</span><span><a href="#projects">Work</a> · <a href="#writeups">Writeups</a> · <a href="#contact">Contact</a></span></footer>
+<footer class="footer"><span class="mono">© {{ site.time | date: "%Y" }} {{ site.data.profile.display_name }} — Built with Jekyll</span><span>
+  {% assign has_previous = false %}
+  {% if site.projects.size > 0 %}<a href="#projects">Work</a>{% assign has_previous = true %}{% endif %}
+  {% if site.writeups.size > 0 %}{% if has_previous %} · {% endif %}<a href="#writeups">Writeups</a>{% assign has_previous = true %}{% endif %}
+  {% if has_previous %} · {% endif %}<a href="#contact">Contact</a>
+</span></footer>
