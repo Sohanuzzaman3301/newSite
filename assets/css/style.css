@@ -79,3 +79,17 @@ a{color:var(--sst-ink);text-decoration:none}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.grid3{grid-template-columns:repeat(2,1fr)}.skills{grid-template-columns:repeat(2,1fr)}.certs{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1fr}.writeup{grid-template-columns:1fr}}
 @media(max-width:600px){.grid3{grid-template-columns:1fr}.nav-links{display:none}}
 .skip:focus{left:8px !important;top:8px !important;width:auto !important;height:auto !important;background:var(--paper);border:1px solid var(--lavender);padding:8px 12px;z-index:100}
+/* 1080p 130% zoom feel for all desktops — bump without breaking mobile */
+@media(min-width:1280px){
+  html{font-size:17px}
+  .hero{padding:56px 28px;gap:36px}
+  .hero-text h1{font-size:48px}
+  .hero-text p{font-size:17px}
+  .hero-note{font-size:13px}
+  .section{padding:56px 28px}
+  .section h2{font-size:21px}
+  .section .sub{font-size:15px}
+  .card h3{font-size:16px}
+  .card p{font-size:14px}
+  .nav-inner{height:60px}
+}
