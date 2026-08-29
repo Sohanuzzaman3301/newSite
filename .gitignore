@@ -4,5 +4,8 @@ _site/
 .jekyll-metadata
 .bundle/
 vendor/
+_bmad/
+.seren*/
+Gemfile.lock
 .DS_Store
 Thumbs.db

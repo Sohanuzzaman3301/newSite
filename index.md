@@ -72,6 +72,14 @@ title: Home
   </div>
 </section>
 
+<section class="section">
+  <h2>Education</h2>
+  <p class="sub">Formal training — thesis and focus.</p>
+  <div class="timeline">
+    <div class="timeline-item"><h4>{{ site.data.education.degree }}</h4><p class="org">{{ site.data.education.school }}</p><p class="date mono">{{ site.data.education.period }} · {{ site.data.education.honor }}</p><ul><li>{{ site.data.education.thesis }}</li><li>{{ site.data.education.focus }}</li></ul></div>
+  </div>
+</section>
+
 <section id="contact" class="section">
   <h2>Contact</h2>
   <div class="contact">
