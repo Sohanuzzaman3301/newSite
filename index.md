@@ -44,35 +44,6 @@ title: Home
 </section>
 {% endif %}
 
-{% if site.research.size > 0 %}
-<section id="research" class="section">
-  <h2>Research</h2>
-  <p class="sub">Undergraduate thesis — EMBER2024 ensemble, 95%+ accuracy, SHAP explanations.</p>
-  <div class="writeups">
-    {% assign research_sorted = site.research | sort: "date" | reverse %}
-    {% for post in research_sorted %}
-    <div class="writeup">
-      {% if post.image %}
-      <img src="{{ post.image }}" alt="{{ post.title }}" style="width:100%;max-width:200px;height:auto;border-radius:4px;margin-bottom:8px">
-      {% endif %}
-      <span class="date mono">{{ post.date | date: "%Y-%m-%d" }} · {{ post.read_time }}</span>
-      <div>
-        <div class="meta-line">
-          <span class="meta-tag">{{ post.category }}</span>
-          {% if post.tags.size > 0 %}
-          <span class="meta-tags">tags: {{ post.tags | join: ", " }}</span>
-          {% endif %}
-        </div>
-        <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-        <p class="excerpt">{{ post.excerpt }}</p>
-      </div>
-      <a class="arrow" href="{{ post.url | relative_url }}">→</a>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
 {% if site.writeups.size > 0 %}
 <section id="writeups" class="section">
   <h2 style="font-size:18px">Writeups</h2>

@@ -6,6 +6,6 @@ description: "Client-side entropy estimator with k-anonymity HIBP checks — pla
 tech: "JavaScript · Astro · HIBP"
 github: "https://github.com/Sohanuzzaman3301/password-strengh-meter"
 writeup: ""
-order: 3
+order: 6
 ---
 Client-side password strength estimator and leak checker. Estimates entropy and crack time with zxcvbn-inspired logic; k-anonymity Have I Been Pwned checks run entirely in browser. Deployed to Cloudflare Pages with CI.

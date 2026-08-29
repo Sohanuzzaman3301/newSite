@@ -1,8 +1,6 @@
 - title: Work
   url: "#projects"
   active: true
-- title: Research
-  url: "#research"
 - title: Writeups
   url: "#writeups"
 - title: Experience
