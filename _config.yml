@@ -1,0 +1,47 @@
+title: "MD Sohanuzzaman Shanto — Aspiring Cybersecurity Professional"
+description: "SOC Analyst in training — SIEM Home Lab (Wazuh/Suricata/Sysmon), SafeLine WAF, EMBER2024 malware research."
+image: /assets/og.png
+url: "http://localhost:4000"
+baseurl: ""
+author: "MD Sohanuzzaman Shanto"
+email: "md.sohanuzzaman@proton.me"
+
+markdown: kramdown
+permalink: /:title/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  writeups:
+    output: true
+    permalink: /writeups/:name/
+  experience:
+    output: false
+  certs:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "writeups"
+    values:
+      layout: "writeup"
+
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock

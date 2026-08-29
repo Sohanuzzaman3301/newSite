@@ -1,0 +1,15 @@
+name: "MD Sohanuzzaman Shanto"
+display_name: "Sohanuzzaman Shanto"
+focus: ["SIEM", "Threat Detection", "Incident Response"]
+lab: "SIEM Home Lab"
+lab_details: "Wazuh + Suricata + Sysmon"
+rank: "THM Top 3% · SOC Level 1"
+next: "SOC Analyst — Open to internships"
+hero_title: "Aspiring Cybersecurity Professional"
+hero_desc: "BEng Computer Science (Wuhan Institute of Technology, 2022–2026) — Building proof through SOC labs, WAF homelab, and explainable malware research (EMBER2024, 95%+ accuracy)."
+hero_note: "Dhaka, Bangladesh · Available for SOC internships · Remote"
+social:
+  github: "https://github.com/Sohanuzzaman3301"
+  linkedin: "https://linkedin.com/in/sohanuzzaman3301"
+  tryhackme: "https://tryhackme.com/p/HiddenV1rus"
+  hackthebox: ""

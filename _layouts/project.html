@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="section">
+  <a href="{{ '/' | relative_url }}#projects" class="mono" style="font-size:12px;color:var(--fog)">← Back to projects</a>
+  <h1 style="margin-top:16px">{{ page.title }}</h1>
+  <p class="sub">{{ page.description }}</p>
+  <img src="{{ page.image }}" alt="{{ page.title }}" style="width:100%;max-height:400px;object-fit:cover;border-radius:8px;border:1px solid var(--lavender);margin:16px 0">
+  <div style="font-size:14px;line-height:1.8;color:var(--slate)">{{ content }}</div>
+  <p class="meta mono" style="margin-top:16px">{{ page.tech }}</p>
+  <div class="links" style="margin-top:8px">
+    {% if page.github %}<a href="{{ page.github }}">GitHub →</a>{% endif %}
+    {% if page.writeup %}<a href="{{ page.writeup }}">Writeup →</a>{% endif %}
+  </div>
+</section>

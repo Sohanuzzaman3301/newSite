@@ -1,0 +1,8 @@
+- group: SIEM & Detection
+  items: [Splunk (SPL), Elastic (KQL), Wazuh, Suricata, Sysmon, Zeek]
+- group: Security Tools
+  items: [Wireshark, Burp Suite, Nmap, VirusTotal, Active Directory, PEStudio]
+- group: Programming & OS
+  items: [Python, Bash, SQL, Windows, Linux]
+- group: ML & Analysis
+  items: [Scikit-learn, TensorFlow, Ensemble Learning, SHAP, MITRE ATT&CK]

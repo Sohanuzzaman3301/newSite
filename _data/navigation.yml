@@ -1,0 +1,9 @@
+- title: Work
+  url: "#projects"
+  active: true
+- title: Writeups
+  url: "#writeups"
+- title: Experience
+  url: "#experience"
+- title: Contact
+  url: "#contact"

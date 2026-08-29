@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+<link rel="icon" href="{{ '/assets/favicon-32.png' | relative_url }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/favicon-180.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>:root{--font-heading:'Sora',system-ui,sans-serif !important; --font-body:'Source Sans 3',system-ui,sans-serif !important; --font-mono:'IBM Plex Mono',monospace !important; --font-display:'Sora',system-ui,sans-serif !important} h1,h2,h3,h4{font-family:'Sora',sans-serif !important} body,p{font-family:'Source Sans 3',sans-serif !important} .mono,pre,code{font-family:'IBM Plex Mono',monospace !important}</style>
+{% seo %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Sohanuzzaman","jobTitle":"SOC Analyst (in training)","url":"{{ site.url }}","sameAs":["{{ site.data.profile.social.github }}","{{ site.data.profile.social.linkedin }}","{{ site.data.profile.social.tryhackme }}"]}</script>
+</head>
+<body>
+<a class="skip mono" href="#projects" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
+{% include nav.html %}
+{{ content }}
+{% include footer.html %}
+<script>
+// Font picker persistence from combo-a
+(function(){
+  const s=localStorage.getItem('sst-fonts');
+  if(!s) return;
+  try{
+    const d=JSON.parse(s);
+    if(d.hg){const l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family='+d.hg+'&display=swap';document.head.appendChild(l);document.documentElement.style.setProperty('--font-heading', "'"+d.h+"', system-ui, sans-serif");}
+    if(d.bg){const l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family='+d.bg+'&display=swap';document.head.appendChild(l);document.documentElement.style.setProperty('--font-body', "'"+d.b+"', system-ui, sans-serif");}
+    if(d.mg){const l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family='+d.mg+'&display=swap';document.head.appendChild(l);document.documentElement.style.setProperty('--font-mono', "'"+d.m+"', monospace");}
+    const style=document.createElement('style');
+    style.textContent=`h1,h2,h3,h4{font-family:'${d.h}', system-ui, sans-serif !important} body,p,.card p{font-family:'${d.b}', system-ui, sans-serif !important} .mono,pre,code{font-family:'${d.m}', monospace !important}`;
+    document.head.appendChild(style);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
