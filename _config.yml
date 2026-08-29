@@ -17,6 +17,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
+  research:
+    output: true
+    permalink: /research/:name/
   writeups:
     output: true
     permalink: /writeups/:name/
@@ -31,6 +34,11 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "research"
   - scope:
       path: ""
       type: "writeups"

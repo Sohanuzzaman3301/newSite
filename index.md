@@ -30,6 +30,17 @@ title: Home
   </div>
 </section>
 
+<section id="research" class="section">
+  <h2 style="font-size:18px">Research</h2>
+  <p class="sub">Undergraduate thesis — EMBER2024 ensemble, 95%+ accuracy, SHAP explanations.</p>
+  <div class="writeups">
+    {% assign research_sorted = site.research | sort: "date" | reverse %}
+    {% for post in research_sorted %}
+    <div class="writeup"><span class="date mono">{{ post.date | date: "%Y-%m-%d" }} · {{ post.read_time }}</span><div><h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span>· {{ post.category }} · tags: {{ post.tags | join: ", " }}</span></h4><p class="excerpt">{{ post.excerpt }}</p></div><a class="arrow" href="{{ post.url | relative_url }}">→</a></div>
+    {% endfor %}
+  </div>
+</section>
+
 <section id="writeups" class="section">
   <h2 style="font-size:18px">Writeups</h2>
   <p class="sub">How I solved it and what to detect next.</p>
@@ -38,6 +49,9 @@ title: Home
     {% for post in sorted %}
     <div class="writeup"><span class="date mono">{{ post.date | date: "%Y-%m-%d" }} · {{ post.read_time }}</span><div><h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span>· {{ post.category }} · tags: {{ post.tags | join: ", " }}</span></h4><p class="excerpt">{{ post.excerpt }}</p></div><a class="arrow" href="{{ post.url | relative_url }}">→</a></div>
     {% endfor %}
+    {% if site.writeups.size == 0 %}
+    <p class="sub" style="margin-top:16px;color:var(--mist)">No writeups yet — research above is the thesis. New detection notes will appear here.</p>
+    {% endif %}
   </div>
 </section>
 
