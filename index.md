@@ -4,13 +4,13 @@ title: Home
 ---
 
 <section class="hero">
-  <div class="code-block"><pre><span class="prompt">> </span><b>cat ./profile.yaml</b>
+  <div class="code-block slide-up"><pre><span class="prompt">> </span><b>cat ./profile.yaml</b>
 <span class="key">name</span>: <span class="str">"{{ site.data.profile.name }}"</span>
 <span class="key">focus</span>: [<span class="str">"{{ site.data.profile.focus[0] }}"</span>, <span class="str">"{{ site.data.profile.focus[1] }}"</span>, <span class="str">"{{ site.data.profile.focus[2] }}"</span>]
 <span class="key">lab</span>: <span class="str">"{{ site.data.profile.lab }}"</span> <span class="typ"># {{ site.data.profile.lab_details }}</span>
 <span class="key">rank</span>: <span class="str">"{{ site.data.profile.rank }}"</span>
 <span class="key">next</span>: <span class="str">"{{ site.data.profile.next }}"</span></pre></div>
-  <div class="hero-text">
+  <div class="hero-text fade-in">
     <h1>{{ site.data.profile.hero_title }}</h1>
     <p>{{ site.data.profile.hero_desc }}</p>
     <div class="hero-btns"><a href="https://raw.githubusercontent.com/Sohanuzzaman3301/cv/main/cv_cyber.pdf" target="_blank" rel="noopener" class="btn-ghost">Download CV</a><a href="{{ site.data.profile.social.github }}" class="btn-ghost">GitHub</a></div>
@@ -19,13 +19,13 @@ title: Home
 </section>
 
 {% if site.projects.size > 0 %}
-<section id="projects" class="section">
+<section id="projects" class="section animate-on-scroll">
   <h2>Practical Projects</h2>
   <p class="sub">Reproducible lab with code, architecture, and detection evidence.</p>
   <div class="grid3">
     {% assign projects_sorted = site.projects | sort: "order" %}
     {% for project in projects_sorted %}
-    <a href="{{ project.url | relative_url }}" class="card-link-wrapper" aria-label="Open {{ project.title }} details">
+    <a href="{{ project.url | relative_url }}" class="card-link-wrapper animate-on-scroll" aria-label="Open {{ project.title }} details">
       <article class="card">
         <span class="tag">{{ project.tag }}</span>
         <img src="{{ project.image }}" alt="{{ project.title }} — {{ project.description }}" loading="lazy">
@@ -45,13 +45,13 @@ title: Home
 {% endif %}
 
 {% if site.writeups.size > 0 %}
-<section id="writeups" class="section">
+<section id="writeups" class="section animate-on-scroll">
   <h2 style="font-size:18px">Writeups</h2>
   <p class="sub">How I solved it and what to detect next.</p>
   <div class="writeups">
     {% assign sorted = site.writeups | sort: "date" | reverse %}
     {% for post in sorted %}
-    <div class="writeup">
+    <div class="writeup animate-on-scroll">
       <span class="date mono">{{ post.date | date: "%Y-%m-%d" }} · {{ post.read_time }}</span>
       <div>
         <div class="meta-line">
@@ -71,13 +71,13 @@ title: Home
 {% endif %}
 
 {% if site.experience.size > 0 %}
-<section id="experience" class="section">
+<section id="experience" class="section animate-on-scroll">
   <h2>Experience</h2>
   <p class="sub">Lab work, competitions, and self-directed study.</p>
   <div class="timeline">
     {% assign exps = site.experience | sort: "order" %}
     {% for exp in exps %}
-    <div class="timeline-item">
+    <div class="timeline-item animate-on-scroll">
       <div class="meta-line"><span class="meta-tag">Experience</span></div>
       <h4>{{ exp.title }}</h4>
       <p class="org">{{ exp.org }}</p>
@@ -90,40 +90,40 @@ title: Home
 {% endif %}
 
 {% if site.data.skills.size > 0 %}
-<section class="section">
+<section class="section animate-on-scroll">
   <h2>Skills</h2>
   <p class="sub">Tools used hands-on in labs and investigations.</p>
   <div class="skills">
     {% for group in site.data.skills %}
-    <div class="skill-group"><h4>{{ group.group }}</h4><div class="pills">{% for item in group.items %}<span class="pill">{{ item }}</span>{% endfor %}</div></div>
+    <div class="skill-group animate-on-scroll"><h4>{{ group.group }}</h4><div class="pills">{% for item in group.items %}<span class="pill">{{ item }}</span>{% endfor %}</div></div>
     {% endfor %}
   </div>
 </section>
 {% endif %}
 
 {% if site.certs.size > 0 %}
-<section class="section">
+<section class="section animate-on-scroll">
   <h2>Certifications</h2>
   <p class="sub">Certifications with verification links where available.</p>
   <div class="certs">
     {% for cert in site.certs %}
-    <div class="cert"><span class="badge">{{ cert.status }}</span><h4>{{ cert.title }}</h4><p>{{ cert.issued }}</p><a href="{{ cert.verify_url }}" class="verify">{{ cert.verify_label }}</a></div>
+    <div class="cert animate-on-scroll"><span class="badge">{{ cert.status }}</span><h4>{{ cert.title }}</h4><p>{{ cert.issued }}</p><a href="{{ cert.verify_url }}" class="verify">{{ cert.verify_label }}</a></div>
     {% endfor %}
   </div>
 </section>
 {% endif %}
 
 {% if site.data.education %}
-<section class="section">
+<section class="section animate-on-scroll">
   <h2>Education</h2>
   <p class="sub">Formal training — thesis and focus.</p>
   <div class="timeline">
-    <div class="timeline-item"><h4>{{ site.data.education.degree }}</h4><p class="org">{{ site.data.education.school }}</p><p class="date mono">{{ site.data.education.period }} · {{ site.data.education.honor }}</p><ul><li>{{ site.data.education.thesis }}</li><li>{{ site.data.education.focus }}</li></ul></div>
+    <div class="timeline-item animate-on-scroll"><h4>{{ site.data.education.degree }}</h4><p class="org">{{ site.data.education.school }}</p><p class="date mono">{{ site.data.education.period }} · {{ site.data.education.honor }}</p><ul><li>{{ site.data.education.thesis }}</li><li>{{ site.data.education.focus }}</li></ul></div>
   </div>
 </section>
 {% endif %}
 
-<section id="contact" class="section">
+<section id="contact" class="section animate-on-scroll">
   <h2>Contact</h2>
   <div class="contact">
     <div class="info">
