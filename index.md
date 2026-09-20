@@ -4,17 +4,41 @@ title: Home
 ---
 
 <section class="hero">
-  <div class="code-block slide-up"><pre><span class="prompt">> </span><b>cat ./profile.yaml</b>
-<span class="key">name</span>: <span class="str">"{{ site.data.profile.name }}"</span>
-<span class="key">focus</span>: [<span class="str">"{{ site.data.profile.focus[0] }}"</span>, <span class="str">"{{ site.data.profile.focus[1] }}"</span>, <span class="str">"{{ site.data.profile.focus[2] }}"</span>]
-<span class="key">lab</span>: <span class="str">"{{ site.data.profile.lab }}"</span> <span class="typ"># {{ site.data.profile.lab_details }}</span>
-<span class="key">rank</span>: <span class="str">"{{ site.data.profile.rank }}"</span>
-<span class="key">next</span>: <span class="str">"{{ site.data.profile.next }}"</span></pre></div>
-  <div class="hero-text fade-in">
-    <h1>{{ site.data.profile.hero_title }}</h1>
-    <p>{{ site.data.profile.hero_desc }}</p>
-    <div class="hero-btns"><a href="https://raw.githubusercontent.com/Sohanuzzaman3301/cv/main/cv_cyber.pdf" target="_blank" rel="noopener" class="btn-ghost">Download CV</a><a href="{{ site.data.profile.social.github }}" class="btn-ghost">GitHub</a></div>
-    <p class="hero-note mono">{{ site.data.profile.hero_note }}</p>
+  <div class="hero-text">
+    <h1 class="hero-title">
+    <span class="hero-title-static hero-role-dynamic" aria-label="Role">SOC</span>
+    <span class="hero-title-dynamic"> Analyst</span>
+    </h1>
+    <p>Hi, My name is {{ site.data.profile.display_name }}, a cybersecurity professional focused on SOC operations, threat detection, and incident response. THM Top 2%, building SIEM labs and analyzing threats.</p>
+    <div class="hero-role-dynamic" aria-hidden="true">
+      <span class="hero-role">SOC</span>
+    </div>
+    <div class="hero-social">
+      <a href="{{ site.data.profile.social.linkedin }}" target="_blank" aria-label="LinkedIn" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="mailto:{{ site.data.contact.email }}" target="_blank" aria-label="Mail" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+        <span>Email</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div id="selfie"></div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-inner">
+    <img src="{{ '/assets/images/desktop-about.png' | relative_url }}" alt="Profile photo" class="about-photo">
+    <div class="about-text">
+      <h2>About</h2>
+      <h3>A self taught with a lot of interest in Cyber Security</h3>
+      <p>Hi, I am Sohanuzzaman Shanto, a self-taught analyst — ranked 1st at Wuhan Institute of Technology (First Class Scholarship). My interest has always been Cyber Security. I want security to be our top priority and to contribute to a more secure environment.</p>
+      <p>I stay relevant by building SIEM labs with Wazuh, Suricata and Sysmon, solving CTFs on TryHackMe (Top 2%) and following the latest developments. I also analyze malware, tune detections and learn from every alert I triage.</p>
+      <p>I aim to grow as a SOC analyst in detection engineering, threat hunting and incident response. I keep a close eye on new vulnerabilities and enjoy challenging myself with unsolved weaknesses — to make the world more secure for the next generation, even if it goes unnoticed.</p>
+    </div>
   </div>
 </section>
 
@@ -133,20 +157,36 @@ title: Home
       <p><b>TryHackMe</b><br><a class="mono" href="https://{{ site.data.contact.tryhackme }}">{{ site.data.contact.tryhackme }}</a> · Top 2%</p>
       <p><b>HackTheBox</b><br><a class="mono" href="https://{{ site.data.contact.hackthebox }}">{{ site.data.contact.hackthebox }}</a></p>
     </div>
-    <form id="contact-form" action="mailto:md.sohanuzzaman@proton.me" method="POST" enctype="text/plain" novalidate><input type="email" name="email" placeholder="Your email" required autocomplete="email" style="margin-bottom:12px"><input type="hidden" name="subject" value="Portfolio contact"><textarea name="message" placeholder="Message — e.g., Internship, SOC role" required rows="4"></textarea><div id="form-status" class="mono" style="font-size:12px;min-height:16px;margin-top:8px;color:var(--fog)" aria-live="polite"></div><button type="submit" id="contact-btn" class="btn" style="margin-top:12px">Send message</button></form>
+    <div class="contact-form-wrap">
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+        <input type="email" name="email" placeholder="Your email" required autocomplete="email">
+        <input type="hidden" name="_subject" value="Portfolio contact">
+        <input type="hidden" name="_captcha" value="false">
+        <textarea name="message" placeholder="Message — e.g., Internship, SOC role" required rows="4"></textarea>
+        <div id="form-status" class="mono" aria-live="polite"></div>
+        <button type="submit" id="contact-btn" class="btn">Send message</button>
+      </form>
+      <p class="contact-fallback">Or email me directly at <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></p>
+    </div>
+  </div>
+</section>
+
 <script>
 (function(){
   const form=document.getElementById('contact-form'), btn=document.getElementById('contact-btn'), status=document.getElementById('form-status');
   if(!form) return;
-  form.addEventListener('submit', (e)=>{
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
     const email=form.email.value.trim(), msg=form.message.value.trim();
-    if(!email || !msg){ e.preventDefault(); status.textContent='Add email + message.'; status.style.color='var(--code-rust)'; return; }
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ e.preventDefault(); status.textContent='Check email format.'; status.style.color='var(--code-rust)'; return; }
-    const body=encodeURIComponent(msg+'\n\nFrom: '+email);
-    form.action='mailto:md.sohanuzzaman@proton.me?subject=Portfolio contact&body='+body;
-    status.textContent='Opening email client…'; status.style.color='var(--fog)';
+    if(!email || !msg){ status.textContent='Add email + message.'; status.style.color='var(--code-rust)'; return; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ status.textContent='Check email format.'; status.style.color='var(--code-rust)'; return; }
+    btn.disabled=true; btn.textContent='Sending…'; status.textContent=''; 
+    try {
+      const res=await fetch(form.action, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,message:msg})});
+      if(res.ok){ status.textContent='Message sent — I will reply soon.'; status.style.color='var(--code-teal)'; form.reset(); }
+      else { status.textContent='Something went wrong. Try emailing directly.'; status.style.color='var(--code-rust)'; }
+    } catch(err){ status.textContent='Network error. Try emailing directly.'; status.style.color='var(--code-rust)'; }
+    btn.disabled=false; btn.textContent='Send message';
   });
 })();
 </script>
-  </div>
-</section>

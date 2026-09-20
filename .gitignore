@@ -11,6 +11,9 @@ _bmad/
 .claude/
 .playwright-mcp/
 skills-lock.json
+.impeccable/
+DESIGN.md
+PRODUCT.md
 # generated / local assets
 generated/
 favicon-gen.png/
